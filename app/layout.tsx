@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "나의 스마트 가계부",
-  description: "간편하게 지출을 기록하는 가계부",
+  title: "AI 가계부 챗봇",
+  description: "AI와 대화하며 지출을 기록하는 가계부",
 };
 
 export const viewport: Viewport = {
@@ -32,7 +32,9 @@ export default function RootLayout({
       lang="ko"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="flex h-full flex-col overflow-hidden font-sans">
+        {children}
+      </body>
     </html>
   );
 }
